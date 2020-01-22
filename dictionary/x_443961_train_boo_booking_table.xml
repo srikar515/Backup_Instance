@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="imp_user" label="Booking_Table" max_length="40" name="x_443961_train_boo_booking_table" type="collection">
+        <element dependent="dob" dependent_on_field="dob" label="Age" max_length="40" name="age" read_only="true" type="integer" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="DOB" mandatory="true" max_length="40" name="dob" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="From" mandatory="true" max_length="40" name="from" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hyderabad" sequence="0" value="hyderabad"/>
+                <element inactive_on_update="false" label="Banglore" sequence="1" value="banglore"/>
+                <element inactive_on_update="false" label="Delhi" sequence="2" value="delhi"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Password" mandatory="true" max_length="40" name="password" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="To" mandatory="true" max_length="40" name="to" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hyderabad" sequence="0" value="hyderabad"/>
+                <element inactive_on_update="false" label="Banglore" sequence="1" value="banglore"/>
+                <element inactive_on_update="false" label="Delhi" sequence="2" value="delhi"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Trains Available" mandatory="true" max_length="40" name="trains_available" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Trains_Avaliable" max_length="40" name="trains_avaliable" type="string">
+            <choice/>
+        </element>
+    </element>
+</database>

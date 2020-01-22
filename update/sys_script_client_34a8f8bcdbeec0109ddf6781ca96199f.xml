@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>It will display the trains avaliable in your location to destination</description>
+        <field>to</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Display_Trains</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading) {
+      return;
+   }
+   var from1=g_form.getValue('from');
+   var to1=g_form.getValue('to');
+   if(from1===''||to1==='')
+	{
+		alert('Fields are Empty');
+	}
+	else
+	{
+		var qr="from="+from1+"^"+"to="+to1;
+		alert(from1);
+		alert(to1);
+		var getTrainRec=new GlideAjax('x_443961_train_boo.Getting_Trains');
+		getTrainRec.addParam('sysparm_name','getTrains');
+		getTrainRec.addParam('sysparam_query',qr);
+		getTrainRec.getXML(gettingTrains);
+		function gettingTrains(response)
+		{
+			var res_val= response.responseXML.documentElement.getAttribute("answer");
+			alert(res_val);
+					g_form.clearValue('age');
+					g_form.setValue('age',res_val);
+
+
+		}
+	}
+
+   //Type appropriate comment here, and begin script below
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-22 05:53:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>34a8f8bcdbeec0109ddf6781ca96199f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Display_Trains</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Train Booking" source="x_443961_train_boo">a617ada4db26c0109ddf6781ca9619f5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Train Booking">a617ada4db26c0109ddf6781ca9619f5</sys_scope>
+        <sys_update_name>sys_script_client_34a8f8bcdbeec0109ddf6781ca96199f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-22 11:45:12</sys_updated_on>
+        <table>x_443961_train_boo_booking_table</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_443961_train_boo.Getting_Trains</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Getting_Trains</name>
+        <script><![CDATA[var Getting_Trains = Class.create();
+Getting_Trains.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+     getTrains: function() {
+		var userRecord = new GlideRecord("x_443961_train_boo_train_table");
+		userRecord.get(this.getParameter('sysparm_query'));
+		var res=this.getParameter('sysparam_query');
+		 gs.addInfoMessage(res);
+		userRecord.addEncodedQuery(res);
+		userRecord.query();
+		 /*userRecord.addQuery(from,'hyderabad');*/
+		 //userRecord.addQuery(res);
+		 //userRecord.query();
+		var result="";
+		while (userRecord.next()) {
+			result=result+userRecord.getValue('number')+" ";
+			gs.addInfoMessage(result);
+		}
+		gs.addInfoMessage(result);
+	return result;
+	},
+    type: 'Getting_Trains'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-22 06:29:02</sys_created_on>
+        <sys_id>331c3c70db2204109ddf6781ca961979</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Getting_Trains</sys_name>
+        <sys_package display_value="Train Booking" source="x_443961_train_boo">a617ada4db26c0109ddf6781ca9619f5</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Train Booking">a617ada4db26c0109ddf6781ca9619f5</sys_scope>
+        <sys_update_name>sys_script_include_331c3c70db2204109ddf6781ca961979</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-22 11:43:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

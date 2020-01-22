@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Booking_Table" language="en" table="x_443961_train_boo_booking_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Booking_Table</label>
+            <language>en</language>
+            <name>x_443961_train_boo_booking_table</name>
+            <plural>Booking_Tables</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-21 15:32:21</sys_created_on>
+            <sys_id>f007bd64db66c0109ddf6781ca961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Booking_Table</sys_name>
+            <sys_package display_value="Train Booking" source="x_443961_train_boo">a617ada4db26c0109ddf6781ca9619f5</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Train Booking">a617ada4db26c0109ddf6781ca9619f5</sys_scope>
+            <sys_update_name>sys_documentation_x_443961_train_boo_booking_table__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-21 15:32:21</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

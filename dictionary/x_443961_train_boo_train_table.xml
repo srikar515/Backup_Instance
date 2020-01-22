@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Train_Table" max_length="40" name="x_443961_train_boo_train_table" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="From" max_length="40" name="from" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hyderabad" sequence="0" value="hyderabad"/>
+                <element inactive_on_update="false" label="Banglore" sequence="1" value="banglore"/>
+                <element inactive_on_update="false" label="Delhi" sequence="2" value="delhi"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="To" max_length="40" name="to" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Hyderabad" sequence="0" value="hyderabad"/>
+                <element inactive_on_update="false" label="Banglore" sequence="1" value="banglore"/>
+                <element inactive_on_update="false" label="Delhi" sequence="2" value="delhi"/>
+            </choice>
+        </element>
+    </element>
+</database>
